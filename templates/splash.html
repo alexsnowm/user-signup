@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Alex's Signup</h1>
+
+    <form action='/signup' method='POST'>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for='username_field_ind_html'>
+                            Username
+                        </label>
+                    </td>
+                    <td>
+                        <input type='text' name='username_field_ind_html' value='{{ entd_username }}'/>
+
+                        <span class='error'>{{ username_err }}</span>
+                    </td>  
+                </tr>              
+
+                <tr>
+                    <td>
+                    <label for='password_1st_field_ind_html'>
+                        Password
+                    </label>
+                    </td>
+                    <td>
+                        <input type='password' name='password_1st_field_ind_html' />
+
+                        <span class='error'>{{ password_1st_err }}</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                    <label for='password_conf_field_ind_html'>
+                        Verify Password
+                    </label>
+                    </td>
+                    <td>
+                        <input type='password' name='password_conf_field_ind_html' />
+
+                        <span class='error'>{{ password_conf_err }}</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                    <label for='eml_field_ind_html'>
+                        Email (optional)
+                    </label>
+                    </td>
+                    <td>
+                        <input type='text' name='eml_field_ind_html' value='{{ entd_eml }}' />
+
+                        <span class='error'>{{ eml_err }}</span>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <input type='submit'>
+        
+    </form>
+{% endblock %}
